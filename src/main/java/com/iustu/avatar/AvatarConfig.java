@@ -8,56 +8,62 @@ import java.util.List;
 import java.util.Random;
 
 /**
- * configuration for avatar
+ * Configuration for avatar.
  */
 public class AvatarConfig {
 
     /**
-     * padding of the avatar
+     * Padding of the avatar.
      */
     private int padding;
 
     /**
-     * the number of cells in a row / column
+     * The number of cells in a row / column.
      */
     private int cellCount;
 
     /**
-     * the side length of each cell
+     * The side length of each cell.
      */
     private int cellLength;
 
     /**
-     * a list of foreground colors
-     * foreColor will be chosen randomly in the list
+     * A list of foreground colors,
+     * foreColor will be chosen randomly in the list.
      */
     private List<Color> foreColorList;
 
     /**
-     * background color (about light-gray by default)
+     * Background color (about light-gray by default).
      */
     private Color backColor;
 
     /**
-     * default foreground color
-     * cannot be modified
+     * Whether the avatar is transparent or not.
+     */
+    private boolean transparent;
+
+    /**
+     * Default foreground color,
+     * cannot be modified.
      */
     private final Color defaultForeColor;
 
     /**
-     * default configuration
+     * Default configuration.
      */
     public AvatarConfig() {
         cellCount = 5;
         padding = 32;
         cellLength = 64;
         backColor = new Color(241, 241, 241);
-        defaultForeColor = Color.magenta;
         foreColorList = new ArrayList<>();
+        transparent = false;
+        defaultForeColor = Color.magenta;
     }
 
     /**
-     * set padding of avatar
+     * Set padding of avatar.
      * @param padding
      */
     public void setPadding(int padding) {
@@ -66,8 +72,7 @@ public class AvatarConfig {
     }
 
     /**
-     * set the number of cells of each row / column
-     * odd would make the avatar look better
+     * Set the number of cells of each row / column.
      * @param cellCount
      */
     public void setCellCount(int cellCount) {
@@ -76,7 +81,7 @@ public class AvatarConfig {
     }
 
     /**
-     * set the length of each cell
+     * Set the length of each cell.
      * @param cellLength
      */
     public void setCellLength(int cellLength) {
@@ -85,8 +90,8 @@ public class AvatarConfig {
     }
 
     /**
-     * add foreground color into the foreColorList
-     * final foreground color will be chosen at random int the list
+     * Add foreground color into the foreColorList,
+     * final foreground color will be chosen at random int the list.
      * @param color
      */
     public void addForeColor(Color color) {
@@ -94,7 +99,15 @@ public class AvatarConfig {
     }
 
     /**
-     * set background color
+     * Note that setting the avatar transparent will disable the background color setting.
+     * @param transparent
+     */
+    public void setTransparent(boolean transparent) {
+        this.transparent = transparent;
+    }
+
+    /**
+     * Set background color.
      * @param color
      */
     public void setBackColor(Color color) {
@@ -113,10 +126,14 @@ public class AvatarConfig {
         return cellLength;
     }
 
+    public boolean getTransparent() {
+        return transparent;
+    }
+
     /**
-     * get foreground color
-     * return defaultForeColor if foreColorList is empty
-     * otherwise return a Color in the list at random
+     * Get foreground color,
+     * return defaultForeColor if foreColorList is empty,
+     * otherwise return a color in the list at random.
      * @return
      */
     public Color getForeColor() {

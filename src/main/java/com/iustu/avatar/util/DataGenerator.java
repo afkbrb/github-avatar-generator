@@ -5,8 +5,8 @@ import java.util.Random;
 public class DataGenerator {
 
     /**
-     * generate data at random for drawing avatar
-     * the element of generated data is 0 or 1
+     * Generate data at random for drawing avatar,
+     * the element of generated data is 0 or 1.
      * @param length the number of both rows and columns of data
      * @return
      */
