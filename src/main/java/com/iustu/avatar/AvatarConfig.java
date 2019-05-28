@@ -98,7 +98,7 @@ public class AvatarConfig {
      * final foreground color will be chosen at random int the list.
      * @param colors
      */
-    public void setForeColors(Color[] colors) {
+    public void setForeColors(Color... colors) {
         foreColorList = Arrays.asList(colors);
     }
 

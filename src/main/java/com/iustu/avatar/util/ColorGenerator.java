@@ -18,6 +18,7 @@ public class ColorGenerator {
             b = random.nextInt(255);
         } while (!checkColor(r, g, b));
 
+        System.out.printf("(r, g, b) = (%d, %d, %d)\n", r, g, b);
         return new Color(r, g, b);
     }
 
@@ -31,8 +32,19 @@ public class ColorGenerator {
      * @return
      */
     private static boolean checkColor(int r, int g, int b) {
-        int min = 20;
-        int max = 240;
-        return !((r < min && g < min && b < min) || (r > max && g > max && b > max));
+        int bright = 210;
+        int dark = 200;
+        int gray = 30;
+
+        // make the color bright
+        if(r < bright && g < bright && g < bright) return false;
+
+        // make the color dark
+        if(r > dark && g > dark && b > dark) return false;
+
+        // make the color less gray
+        if(Math.abs(r - g) < gray && Math.abs(g - b) < gray && Math.abs(b - r) < gray) return false;
+
+        return true;
     }
 }
