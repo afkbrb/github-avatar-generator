@@ -18,7 +18,6 @@ public class ColorGenerator {
             b = random.nextInt(255);
         } while (!checkColor(r, g, b));
 
-        System.out.printf("(r, g, b) = (%d, %d, %d)\n", r, g, b);
         return new Color(r, g, b);
     }
 
