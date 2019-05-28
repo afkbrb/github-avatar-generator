@@ -15,6 +15,7 @@ public class Avatar {
      * Configuration for avatar.
      */
     private AvatarConfig avatarConfig;
+
     /**
      * Actual avatar image.
      */
