@@ -2,6 +2,7 @@ package com.iustu.avatar;
 
 import com.iustu.avatar.exception.AvatarException;
 import com.iustu.avatar.util.DataGenerator;
+import com.iustu.avatar.util.ImageExhibitor;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
@@ -21,18 +22,22 @@ public class Avatar {
      */
     private BufferedImage avatarImage;
 
+    public Avatar() {
+        this(new AvatarConfig());
+    }
+
     public Avatar(AvatarConfig avatarConfig) {
         this.avatarConfig = avatarConfig;
+        generateNewAvatar();
     }
 
     /**
-     * Create new avatar image according to configuration at random,
-     * and then write image to specified position.
-     * @param filepath position where to store the avatar
+     * Save avatar image as PNG file.
+     * @param filepath where to store the avatar
      * @return
      */
-    public void createPNGAvatarAt(String filepath) {
-        generateAvatar();
+    public void saveAsPNG(String filepath) {
+        if(avatarImage == null) generateNewAvatar();
         // write image
         try {
             ImageIO.write(avatarImage, "png", new File(filepath));
@@ -42,9 +47,9 @@ public class Avatar {
     }
 
     /**
-     * Generate avatar at random.
+     * Create new avatar image at random according to configuration.
      */
-    private void generateAvatar() {
+    public void generateNewAvatar() {
         if(avatarConfig == null) throw new AvatarException("avatar hasn't been configured yet!");
 
         int cellCount = avatarConfig.getCellCount();
@@ -77,6 +82,14 @@ public class Avatar {
         }
 
         g.dispose();
+    }
+
+    /**
+     * Show the generated avatar image with local application.
+     */
+    public void showAvatar() {
+        if(avatarImage == null) throw new AvatarException("avatar image has been generated yet!");
+        ImageExhibitor.showImage(avatarImage);
     }
 
 }
