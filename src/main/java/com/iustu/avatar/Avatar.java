@@ -28,7 +28,6 @@ public class Avatar {
 
     /**
      * generate new image according to the configuration at random
-     *
      * @return the caller itself
      */
     public Avatar generateNewAvatarImage() {
