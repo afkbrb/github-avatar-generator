@@ -1,9 +1,11 @@
 package com.iustu.avatar;
 
 import com.iustu.avatar.exception.AvatarException;
+import com.iustu.avatar.util.ColorGenerator;
 
 import java.awt.*;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
@@ -44,12 +46,6 @@ public class AvatarConfig {
     private boolean transparent;
 
     /**
-     * Default foreground color,
-     * cannot be modified.
-     */
-    private final Color defaultForeColor;
-
-    /**
      * Default configuration.
      */
     public AvatarConfig() {
@@ -57,9 +53,7 @@ public class AvatarConfig {
         padding = 32;
         cellLength = 64;
         backColor = new Color(241, 241, 241);
-        foreColorList = new ArrayList<>();
         transparent = false;
-        defaultForeColor = Color.magenta;
     }
 
     /**
@@ -90,13 +84,35 @@ public class AvatarConfig {
     }
 
     /**
-     * Add foreground color into the foreColorList,
-     * final foreground color will be chosen at random int the list.
+     * Set foreground color list,
+     * the list contains only this color.
      * @param color
      */
-    public void addForeColor(Color color) {
-        this.foreColorList.add(color);
+    public void setForeColor(Color color) {
+        foreColorList = new ArrayList<>();
+        foreColorList.add(color);
     }
+
+    /**
+     * Set foreground color list,
+     * final foreground color will be chosen at random int the list.
+     * @param colors
+     */
+    public void setForeColors(Color[] colors) {
+        foreColorList = Arrays.asList(colors);
+    }
+
+    /**
+     * Set foreground color list,
+     * final foreground color will be chosen at random int the list.
+     * @param colors
+     */
+    public void setForeColors(List<Color> colors) {
+        // shouldn't be written as: foreColorList = colors;
+        // otherwise, if colors change, foreColorList will also change
+        foreColorList = new ArrayList<>(colors);
+    }
+
 
     /**
      * Note that setting the avatar transparent will disable the background color setting.
@@ -131,13 +147,13 @@ public class AvatarConfig {
     }
 
     /**
-     * Get foreground color,
-     * return defaultForeColor if foreColorList is empty,
-     * otherwise return a color in the list at random.
+     * Get foreground color.
+     * Return a color in foreColorList at random if the list is not empty,
+     * otherwise return a random color that meets certain condition.
      * @return
      */
     public Color getForeColor() {
-        if(foreColorList == null || foreColorList.size() == 0) return defaultForeColor;
+        if (foreColorList == null || foreColorList.size() == 0) return ColorGenerator.generateColor();
         return foreColorList.get((new Random()).nextInt(foreColorList.size()));
     }
 
