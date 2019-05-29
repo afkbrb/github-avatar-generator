@@ -114,6 +114,13 @@ public class AvatarConfig {
         foreColorList = new ArrayList<>(colors);
     }
 
+    /**
+     * Set background color.
+     * @param color
+     */
+    public void setBackColor(Color color) {
+        this.backColor = color;
+    }
 
     /**
      * Note that setting the avatar transparent will disable the background color setting.
@@ -121,14 +128,6 @@ public class AvatarConfig {
      */
     public void setTransparent(boolean transparent) {
         this.transparent = transparent;
-    }
-
-    /**
-     * Set background color.
-     * @param color
-     */
-    public void setBackColor(Color color) {
-        this.backColor = color;
     }
 
     public int getPadding() {
