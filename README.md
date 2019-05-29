@@ -2,7 +2,7 @@
 
 Generate github-style avatar with java awt.
 
-This project is inspired by [gabrie-allaigre/avatar-generator](https://github.com/gabrie-allaigre/avatar-generator).
+This project was inspired by [gabrie-allaigre/avatar-generator](https://github.com/gabrie-allaigre/avatar-generator).
 
 ### Example
 
