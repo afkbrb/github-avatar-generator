@@ -77,7 +77,7 @@ public class Examples {
     }
 
     /**
-     * Set foreground color.
+     * Set color.
      */
     public static void singleColorConfigExample() {
         AvatarConfig config = new AvatarConfig();
