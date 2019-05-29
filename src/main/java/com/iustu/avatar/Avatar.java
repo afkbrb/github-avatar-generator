@@ -69,7 +69,7 @@ public class Avatar {
         int avatarLength = 2 * padding + cellCount * cellSize;
         int[][] data = DataGenerator.generateData(cellCount);
 
-        avatarImage = new BufferedImage(avatarLength, avatarLength, BufferedImage.TYPE_INT_BGR);
+        avatarImage = new BufferedImage(avatarLength, avatarLength, BufferedImage.TYPE_INT_RGB);
         Graphics2D g = avatarImage.createGraphics();
 
         if(avatarConfig.getTransparent()) {
