@@ -28,7 +28,7 @@ public class Avatar {
 
     public Avatar(AvatarConfig avatarConfig) {
         this.avatarConfig = avatarConfig;
-        generateNewAvatar();
+        build();
     }
 
     /**
@@ -37,7 +37,7 @@ public class Avatar {
      * @return
      */
     public void saveAsPNG(String filepath) {
-        if(avatarImage == null) generateNewAvatar();
+        if(avatarImage == null) build();
         // write image
         try {
             ImageIO.write(avatarImage, "png", new File(filepath));
@@ -47,10 +47,21 @@ public class Avatar {
     }
 
     /**
-     * Create new avatar image at random according to configuration.
+     * Build the avatar, calling the method will create new avatar
+     * image at random according to configuration.
      */
-    public void generateNewAvatar() {
+    public void build() {
         if(avatarConfig == null) throw new AvatarException("avatar hasn't been configured yet!");
+        avatarImage = generateAndGetAvatar();
+    }
+
+
+    /**
+     * Generate new avatar and return it.
+     * @return the new generated avatar
+     */
+    public BufferedImage generateAndGetAvatar() {
+        BufferedImage avatarImage;
 
         int cellCount = avatarConfig.getCellCount();
         int padding = avatarConfig.getPadding();
@@ -82,6 +93,8 @@ public class Avatar {
         }
 
         g.dispose();
+
+        return avatarImage;
     }
 
     /**
