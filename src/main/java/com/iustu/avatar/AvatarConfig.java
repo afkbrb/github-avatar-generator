@@ -25,9 +25,10 @@ public class AvatarConfig {
     private int cellCount;
 
     /**
-     * The side length of each cell.
+     * The size of each cell.
+     * Both height and width of cell are equal to it.
      */
-    private int cellLength;
+    private int cellSize;
 
     /**
      * A list of foreground colors,
@@ -51,7 +52,7 @@ public class AvatarConfig {
     public AvatarConfig() {
         cellCount = 5;
         padding = 32;
-        cellLength = 64;
+        cellSize = 64;
         backColor = new Color(241, 241, 241);
         transparent = false;
     }
@@ -75,12 +76,12 @@ public class AvatarConfig {
     }
 
     /**
-     * Set the length of each cell.
-     * @param cellLength
+     * Set the size of each cell.
+     * @param cellSize
      */
-    public void setCellLength(int cellLength) {
-        if(cellLength < 0) throw new AvatarException("cellLength must be position");
-        this.cellLength = cellLength;
+    public void setCellSize(int cellSize) {
+        if(cellSize < 0) throw new AvatarException("cellSize must be position");
+        this.cellSize = cellSize;
     }
 
     /**
@@ -138,8 +139,8 @@ public class AvatarConfig {
         return cellCount;
     }
 
-    public int getCellLength() {
-        return cellLength;
+    public int getCellSize() {
+        return cellSize;
     }
 
     public boolean getTransparent() {

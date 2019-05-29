@@ -65,8 +65,8 @@ public class Avatar {
 
         int cellCount = avatarConfig.getCellCount();
         int padding = avatarConfig.getPadding();
-        int cellLength = avatarConfig.getCellLength();
-        int avatarLength = 2 * padding + cellCount * cellLength;
+        int cellSize = avatarConfig.getCellSize();
+        int avatarLength = 2 * padding + cellCount * cellSize;
         int[][] data = DataGenerator.generateData(cellCount);
 
         avatarImage = new BufferedImage(avatarLength, avatarLength, BufferedImage.TYPE_INT_BGR);
@@ -88,7 +88,7 @@ public class Avatar {
         for (int i = 0; i < cellCount; i++) {
             for (int j = 0; j < cellCount; j++) {
                 if (data[i][j] == 0) continue;
-                g.fillRect(padding + i * cellLength, padding + j * cellLength, cellLength, cellLength);
+                g.fillRect(padding + i * cellSize, padding + j * cellSize, cellSize, cellSize);
             }
         }
 
