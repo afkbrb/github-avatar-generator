@@ -114,7 +114,7 @@ public class Examples {
     }
 
     /**
-     * Tool for showing multi image together.
+     * Tool for showing multi images together.
      * @param avatar
      * @param width
      * @param height
