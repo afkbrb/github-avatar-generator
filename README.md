@@ -45,10 +45,67 @@ mvn install
 
 |Method|Description|
 |---|---|
-|void build()|Build the avatar, calling the method will create new avatar image at random according to configuration.|
+|void build()|Build the avatar, calling the method each time will create a new avatar image at random according to configuration.|
 |BufferedImage generateAndGetAvatar()|Generate a new avatar image and return it.|
 |void showAvatar()|Show the generated avatar image with local application.|
 |void saveAsPNG(String filepath)|Save avatar image as PNG file. The filepath include path and filename, for example, "E:/avatar.png", you should make sure that the path exists.|
 
+## Example
+
+Default
+
+```java
+Avatar avatar = new Avatar();
+avatar.showAvatar();
+```
+
+Save
+
+```java
+Avatar avatar = new Avatar();
+avatar.saveAsPNG("E:/avatar.png");
+```
+
+Set padding and cell size
+
+```java
+AvatarConfig config = new AvatarConfig();
+config.setPadding(16);
+config.setCellSize(32);
+Avatar avatar = new Avatar(config);
+avatar.showAvatar();
+```
+
+Set the number of cells per row / column
+
+```java
+config.setCellCount(8);
+```
+
+Set transparency
+
+```java
+config.setTransparent(true);
+```
+
+Set color
+```java
+config.setForeColor(Color.MAGENTA);
+// config.setBackColor(Color.LIGHT_GRAY);
+```
+
+Set colors
+```java
+config.setForeColors(Color.MAGENTA, Color.BLUE, Color.GREEN);
+
+// the other way
+List<Color> colors = new ArrayList<>();
+colors.add(Color.YELLOW);
+colors.add(Color.ORANGE);
+colors.add(Color.CYAN);
+config.setForeColors(colors);
+```
+
+For more example details, see [example](https://github.com/2w6f8c/github-avatar-generator/blob/master/example/Examples.java).
 
 
