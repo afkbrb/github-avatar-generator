@@ -107,6 +107,6 @@ colors.add(Color.CYAN);
 config.setForeColors(colors);
 ```
 
-For more example details, see [example](https://github.com/2w6f8c/github-avatar-generator/blob/master/example/Examples.java).
+For more example details, see [example](https://github.com/afkbrb/github-avatar-generator/blob/master/example/Examples.java).
 
 
