@@ -8,8 +8,6 @@ This project was inspired by [gabrie-allaigre/avatar-generator](https://github.c
 
 ![](/img/01.png)
 
-![](/img/02.png)
-
 ### Build Setup
 
 ```bash
