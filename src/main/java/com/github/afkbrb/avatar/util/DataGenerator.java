@@ -1,4 +1,4 @@
-package com.iustu.avatar.util;
+package com.github.afkbrb.avatar.util;
 
 import java.util.Random;
 

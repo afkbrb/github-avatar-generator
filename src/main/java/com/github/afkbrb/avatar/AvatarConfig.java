@@ -1,7 +1,7 @@
-package com.iustu.avatar;
+package com.github.afkbrb.avatar;
 
-import com.iustu.avatar.exception.AvatarException;
-import com.iustu.avatar.util.ColorGenerator;
+import com.github.afkbrb.avatar.exception.AvatarException;
+import com.github.afkbrb.avatar.util.ColorGenerator;
 
 import java.awt.*;
 import java.util.ArrayList;

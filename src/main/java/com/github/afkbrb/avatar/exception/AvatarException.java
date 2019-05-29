@@ -1,4 +1,4 @@
-package com.iustu.avatar.exception;
+package com.github.afkbrb.avatar.exception;
 
 public class AvatarException extends RuntimeException{
 

@@ -1,6 +1,6 @@
-import com.iustu.avatar.Avatar;
-import com.iustu.avatar.AvatarConfig;
-import com.iustu.avatar.util.ImageExhibitor;
+import com.github.afkbrb.avatar.Avatar;
+import com.github.afkbrb.avatar.AvatarConfig;
+import com.github.afkbrb.avatar.util.ImageExhibitor;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
