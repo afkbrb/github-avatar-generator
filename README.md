@@ -38,8 +38,9 @@ mvn install
 |setTransparent(boolean transparent)|Set the transparency of the avatar.|false|
 |setBackColor(Color color)|Set the background color of the avatar.|Color(241, 241, 241)|
 
-> Notice:
-> The final foreground color will be decided by the last called setForeColor* method.
+Notice
+
+> The final foreground color will be decided by the last called setForeColor* method. And if none of these setForeColor* methods are called, the foreground color will be generated at random but will also meet certain conditions to make the color look nice.
 
 ### Create
 
