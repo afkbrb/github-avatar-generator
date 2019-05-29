@@ -17,7 +17,7 @@ mvn install
 
 ```xml
 <dependency>
-    <groupId>com.iustu</groupId>
+    <groupId>com.github.afkbrb</groupId>
     <artifactId>github-avatar-generator</artifactId>
     <version>1.0-SNAPSHOT</version>
 </dependency>
