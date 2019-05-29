@@ -4,11 +4,11 @@ Generate github-style avatar with java awt.
 
 This project was inspired by [gabrie-allaigre/avatar-generator](https://github.com/gabrie-allaigre/avatar-generator).
 
-### Avatar Set
+## Result Set
 
 ![](/img/01.png)
 
-### Build Setup
+## Build Setup
 
 ```bash
 # install to local repository
@@ -23,9 +23,9 @@ mvn install
 </dependency>
 ```
 
-### API
+## API
 
-#### Configuration
+### Configuration
 
 |Method|Description|Default|
 |---|---|---|
@@ -41,7 +41,7 @@ mvn install
 > Notice:
 > The final foreground color will be decided by the last called setForeColor* method.
 
-#### Create
+### Create
 
 |Method|Description|
 |---|---|
