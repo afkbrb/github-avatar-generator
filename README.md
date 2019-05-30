@@ -19,7 +19,7 @@ mvn install
 <dependency>
     <groupId>com.github.afkbrb</groupId>
     <artifactId>github-avatar-generator</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.0</version>
 </dependency>
 ```
 
