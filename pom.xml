@@ -6,7 +6,7 @@
 
     <groupId>com.github.afkbrb</groupId>
     <artifactId>github-avatar-generator</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.0</version>
     <name>github-avatar-generator</name>
     <description>Tool for generating github-style avatars.</description>
     <url>https://github.com/afkbrb/github-avatar-generator</url>
