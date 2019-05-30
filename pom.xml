@@ -7,12 +7,9 @@
     <groupId>com.github.afkbrb</groupId>
     <artifactId>github-avatar-generator</artifactId>
     <version>1.0-SNAPSHOT</version>
-
-    <parent>
-        <groupId>org.sonatype.oss</groupId>
-        <artifactId>oss-parent</artifactId>
-        <version>7</version>
-    </parent>
+    <name>github-avatar-generator</name>
+    <description>Tool for generating github-style avatars.</description>
+    <url>https://github.com/afkbrb/github-avatar-generator</url>
 
     <licenses>
         <license>
@@ -24,7 +21,7 @@
 
     <scm>
         <url>https://github.com/afkbrb/github-avatar-generator</url>
-        <connection>git@github.com:afkbrb/github-avatar-generator.git</connection>
+        <connection>scm:git:git@github.com:afkbrb/github-avatar-generator.git</connection>
         <developerConnection>https://github.com/afkbrb</developerConnection>
     </scm>
 
@@ -85,5 +82,16 @@
             </plugin>
         </plugins>
     </build>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>oss</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+        <repository>
+            <id>oss</id>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+    </distributionManagement>
 
 </project>
