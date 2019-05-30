@@ -8,8 +8,46 @@
     <artifactId>github-avatar-generator</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <parent>
+        <groupId>org.sonatype.oss</groupId>
+        <artifactId>oss-parent</artifactId>
+        <version>7</version>
+    </parent>
+
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <scm>
+        <url>https://github.com/afkbrb/github-avatar-generator</url>
+        <connection>git@github.com:afkbrb/github-avatar-generator.git</connection>
+        <developerConnection>https://github.com/afkbrb</developerConnection>
+    </scm>
+
+    <developers>
+        <developer>
+            <name>afkbrb</name>
+            <email>2w6f8c@gmail.com</email>
+            <url>https://github.com/afkbrb</url>
+        </developer>
+    </developers>
+
     <build>
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.6.2</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+
             <!-- assembly -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
