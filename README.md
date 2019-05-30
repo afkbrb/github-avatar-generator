@@ -42,7 +42,7 @@ Notice
 
 > The final foreground color will be decided by the last called setForeColor* method. And if none of these setForeColor* methods are called, the foreground color will be generated at random but will also meet certain conditions to make the color look nice.
 
-### Create
+### Creation
 
 |Method|Description|
 |---|---|
@@ -108,5 +108,9 @@ config.setForeColors(colors);
 ```
 
 For more example details, see [example](https://github.com/afkbrb/github-avatar-generator/blob/master/example/Examples.java).
+
+## Licence
+
+[The Apache Software License, Version 2.0](./LICENSE)
 
 
