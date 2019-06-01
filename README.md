@@ -8,12 +8,9 @@ This project was inspired by [gabrie-allaigre/avatar-generator](https://github.c
 
 ![](/img/01.png)
 
-## Build Setup
+## Dependency
 
-```bash
-# install to local repository
-mvn install
-```
+The artifact has been released to center maven, simply add dependency.
 
 ```xml
 <dependency>
